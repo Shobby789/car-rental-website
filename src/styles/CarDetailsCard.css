@@ -1,0 +1,71 @@
+.CarDetailsCard {
+  border: 1px solid rgb(231, 228, 228);
+  border-radius: 10px;
+  width: 22rem;
+  height: 23rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.CarDetailsCard:hover {
+  top: -6px;
+  box-shadow: 0 0 30px silver;
+  transition: 0.5s;
+}
+
+.card-details-image {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.car-details-text {
+  /* background-color: silver; */
+  width: 100%;
+  height: 9rem;
+  padding: 0.6rem 1rem;
+  position: relative;
+}
+
+.car-details-text h3 {
+  display: inline;
+}
+
+.rating {
+  margin: 0.6rem 0;
+}
+
+.price {
+  position: absolute;
+  right: 0rem;
+}
+
+.price span {
+  font-size: 0.6rem;
+  display: inline-block;
+  position: relative;
+  left: -35px;
+  top: 15px;
+}
+
+.reviews {
+  margin-left: 0.5rem;
+  position: relative;
+  top: -3px;
+}
+
+.info-icons span {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.info span {
+  margin-right: 1.8rem;
+  position: relative;
+  top: -8px;
+  font-size: 0.8rem;
+}

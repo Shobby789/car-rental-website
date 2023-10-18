@@ -1,0 +1,101 @@
+.cars-list {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.cars-list h5 {
+  color: rgb(148, 147, 147);
+}
+
+.car-list-container {
+  width: 90%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem auto 0;
+}
+
+.car-card {
+  width: 20rem;
+  height: 22rem;
+  position: relative;
+  border-radius: 13px;
+  margin: 1rem 0.5rem;
+  /* box-shadow: 0 0 20px 0px rgb(128, 128, 128); */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: brightness(80%);
+  border-radius: 13px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.car-card:hover {
+  transition: 0.7s;
+  top: -8px;
+  /* left: 3px; */
+  box-shadow: 0px 20px 40px rgb(128, 128, 128);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  color: white;
+  font-size: 1.6rem;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* find-car-list */
+.find-car-list {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.find-car-list h5 {
+  color: rgb(148, 147, 147);
+}
+
+.card-type-container {
+  width: 90%;
+  /* border: 1px solid black; */
+  margin: 2rem auto 0rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .cars-list {
+    padding: 4rem 0.8rem;
+  }
+
+  .car-list-container {
+    width: 100%;
+  }
+
+  .find-car-list {
+    padding: 2rem 1rem;
+  }
+
+  .card-type-container {
+    width: 100%;
+  }
+}

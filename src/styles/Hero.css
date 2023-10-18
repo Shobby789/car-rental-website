@@ -1,0 +1,137 @@
+.hero-section {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1583573278124-e8d4fd3edf3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.search-fields {
+  width: 80% !important;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.search-fields .search-col {
+  width: 25%;
+  /* border: 1px solid orange; */
+  /* padding: 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* dropdown */
+.dropbtn {
+  background-color: #ebebec;
+  color: white;
+  width: 200px !important;
+  padding: 0.6rem 0.8rem;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+  z-index: 10;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #ebebec;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* z-index: 1; */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* search-btn */
+.search-btn {
+  width: 200px;
+  padding: 0.6rem;
+  background-color: rgb(10, 224, 153);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.search-btn:hover {
+  background-color: rgb(8, 8, 8);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    font-size: 1.5rem;
+    height: 110vh;
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    line-height: 50px;
+  }
+
+  .hero-section h6 {
+    margin: 1.5rem 0;
+  }
+
+  .search-fields {
+    flex-direction: column;
+  }
+
+  .search-fields .search-col {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

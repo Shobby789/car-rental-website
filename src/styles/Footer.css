@@ -1,0 +1,149 @@
+.footer {
+  width: 100%;
+  min-height: 65vh;
+  background-color: black;
+  color: white;
+  padding: 3rem 4rem 0rem;
+}
+
+.footer-row {
+  /* border: 1px solid white; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-col {
+  width: 33%;
+  /* border: 1px solid silver; */
+  margin-bottom: 0.1rem;
+  padding: 1rem;
+}
+
+.footer-col h1 {
+  visibility: hidden;
+}
+
+.footer-col p {
+  margin: 1rem 0rem;
+}
+
+.footer-col h2 {
+  font-size: 2rem;
+}
+
+.footer-col h2::first-letter {
+  font-weight: 200;
+}
+
+.footer-icon {
+  font-size: 1.1rem;
+  margin-bottom: -2px;
+  margin-right: 7px;
+}
+
+.footer-col #email {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+#email::placeholder {
+  color: silver;
+}
+
+.subscribe-btn {
+  background-color: rgb(12, 214, 147);
+  padding: 0.4rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.social-icons {
+  margin-top: 1.5rem !important;
+}
+
+.social-media-icon {
+  padding: 0.6rem 0.7rem 0.2rem 0.7rem;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+}
+
+.facebook {
+  background-color: rgb(6, 88, 121);
+}
+
+.twitter {
+  background-color: rgb(43, 209, 154);
+}
+
+.youtube {
+  background-color: rgb(190, 27, 27);
+}
+
+.pinterest {
+  background-color: rgb(240, 34, 34);
+}
+
+.instagram {
+  background-color: #6c5ce7;
+}
+
+/* footer-row-2 */
+.footer-row-2 {
+  border-top: 1px solid rgb(74, 74, 74);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.footer-row-2 ul li {
+  display: inline;
+}
+
+.footer-row-2 ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+  .footer-row {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-row-2 {
+    flex-direction: column;
+  }
+
+  .footer-row-2 ul {
+    margin-top: 1rem;
+  }
+}

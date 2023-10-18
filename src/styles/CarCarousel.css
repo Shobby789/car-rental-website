@@ -1,0 +1,9 @@
+@import "react-slideshow-image/dist/styles.css";
+
+.slick-disabled {
+  display: none;
+}
+
+.slide-container {
+  z-index: 100 !important;
+}

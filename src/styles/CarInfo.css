@@ -1,0 +1,189 @@
+.car-info {
+  width: 100%;
+  padding: 4rem 5rem;
+}
+
+.car-info-row {
+  width: 100%;
+  padding: 1rem 0rem;
+  display: flex;
+}
+
+.car-info-text-col {
+  width: 65%;
+  padding: 1rem;
+}
+
+.car-interior-info {
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-left: none;
+  border-right: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-info-text-col h2 {
+  margin: 0.6rem 0;
+}
+
+.car-interior-info div {
+  display: flex;
+  align-items: center;
+}
+
+.car-interior-info div span {
+  margin: 0 0.5rem;
+}
+
+.auto {
+  margin: 0 0.5rem;
+}
+
+.car-info-icon {
+  font-size: 1.5rem;
+}
+
+/* include */
+.include {
+  width: 100%;
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  padding: 1rem 0;
+}
+
+.include div {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.check-icon {
+  margin: 0 0.3rem 0 0;
+}
+
+.excluded {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.excluded div {
+  width: 33%;
+}
+
+/* car-info-form-col  */
+.car-info-form-col {
+  width: 35%;
+  /* border: 1px solid red; */
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.car-info-form-col form {
+  border: 1px solid silver;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 0 0.5rem 0;
+}
+
+.car-info-form-col form h2 {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.car-info-form-col form h2 span {
+  font-size: 0.6rem;
+}
+
+.car-info-form-col form div {
+  /* border: 1px solid black; */
+  margin: 0.4rem 0;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.car-info-form-col form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+.car-info-form-col form input {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid silver;
+  outline: none;
+  border-radius: 5px;
+}
+
+#email {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid silver;
+  outline: none;
+  border-radius: 5px;
+}
+
+.booking-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: rgb(14, 227, 156);
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+  .car-info {
+    padding: 2rem 1rem;
+  }
+
+  .car-info-row {
+    flex-direction: column;
+  }
+
+  .car-interior-info {
+    flex-direction: column;
+  }
+
+  .car-info-text-col {
+    width: 100%;
+  }
+
+  .car-info-form-col {
+    width: 100%;
+  }
+
+  .include {
+    flex-direction: column;
+  }
+
+  .include div {
+    width: 100%;
+    margin: 0.4rem 0;
+  }
+}

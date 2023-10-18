@@ -1,0 +1,50 @@
+.search-fields {
+  width: 100%;
+  padding: 3rem 4rem;
+  margin: 0 auto;
+}
+
+.search-fields-container {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(207, 205, 205);
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.search-field-col {
+  width: 25%;
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-field-col button {
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+/* select-field */
+.select-field {
+  width: 90%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid silver;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 720px) {
+  .search-fields {
+    padding: 3rem 1rem;
+  }
+  .search-fields-container {
+    flex-direction: column;
+  }
+
+  .search-field-col {
+    width: 100%;
+  }
+}
