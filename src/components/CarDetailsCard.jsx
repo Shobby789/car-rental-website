@@ -3,8 +3,10 @@ import { AiOutlineStar } from "react-icons/ai";
 import { MdPersonOutline } from "react-icons/md";
 import { PiBagLight } from "react-icons/pi";
 import { VscSettings } from "react-icons/vsc";
+import { useNavigate } from "react-router-dom";
 
 export default function CarDetailsCard({
+  id,
   carImg,
   carName,
   carRate,
@@ -12,8 +14,12 @@ export default function CarDetailsCard({
   gear,
   luggage,
 }) {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`${carName}/${id}`);
+  };
   return (
-    <div className="CarDetailsCard">
+    <div className="CarDetailsCard" id={id} onClick={handleNavigate}>
       <img src={carImg} alt="" className="card-details-image" />
       <div className="car-details-text">
         <h3>{carName}</h3>

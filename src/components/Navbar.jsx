@@ -18,7 +18,7 @@ export default function Navbar() {
         <nav ref={navRef}>
           <Link to="/">Home</Link>
           <Link to="/cars">Cars</Link>
-          <Link to="/Booking">Booking</Link>
+          {/* <Link to="/Booking">Booking</Link> */}
           <Link to="/contact">Contact</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             {/* <i class="bi bi-x"></i> */}

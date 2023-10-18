@@ -68,6 +68,7 @@ export default function Footer() {
             />
             <button className="subscribe-btn">Subscribe</button>
           </div>
+          <p></p>
         </div>
       </div>
       <div className="footer-row-2">

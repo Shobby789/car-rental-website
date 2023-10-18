@@ -3,32 +3,40 @@ import { IoPersonOutline } from "react-icons/io5";
 import { PiBagLight } from "react-icons/pi";
 import { VscSettings } from "react-icons/vsc";
 import { AiOutlineCar, AiOutlineCheck } from "react-icons/ai";
+import { carsForBooking } from "../data/cars";
+import { useParams } from "react-router-dom";
 
 export default function CarInfo() {
+  const params = useParams();
+  const find_car = carsForBooking.find((c) => {
+    return c.id == params.id;
+  });
+
+  console.log("find_car >> ", find_car);
   return (
     <div className="car-info">
       <div className="car-info-row">
         <div className="car-info-text-col">
-          <h1>Audi A4</h1>
+          <h1>{find_car.name}</h1>
           <p>reviews</p>
           <div className="car-interior-info">
             <div>
               <IoPersonOutline className="car-info-icon" />
-              <span>5</span>
+              <span>{find_car.seats}</span>
               <p>Passengers</p>
             </div>
             <div>
               <PiBagLight className="car-info-icon" />
-              <span>2</span>
+              <span>{find_car.luggage}</span>
               <p>Luggages</p>
             </div>
             <div>
               <VscSettings className="car-info-icon" />
-              <p className="auto">Auto</p>
+              <p className="auto">{find_car.gearType}</p>
             </div>
             <div>
               <AiOutlineCar className="car-info-icon" />
-              <span>4</span>
+              <span>{find_car.doors}</span>
               <p>Doors</p>
             </div>
           </div>
@@ -101,13 +109,13 @@ export default function CarInfo() {
             <div>
               <p>
                 <AiOutlineCheck className="check-icon" />
-                GPS Navigation
+                {find_car.exluded[0]}
               </p>
             </div>
             <div>
               <p>
                 <AiOutlineCheck className="check-icon" />
-                Sunroof
+                {find_car.exluded[1]}
               </p>
             </div>
           </div>
@@ -115,7 +123,7 @@ export default function CarInfo() {
         <div className="car-info-form-col">
           <form>
             <h2>
-              $84 <span>Per Day</span>
+              ${find_car.ratePerDay} <span>Per Day</span>
             </h2>
             <div>
               <label htmlFor="fullName">Full Name</label>
