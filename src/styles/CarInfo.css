@@ -157,6 +157,13 @@
   margin-top: 1rem;
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+}
+
 @media screen and (max-width: 720px) {
   .car-info {
     padding: 2rem 1rem;

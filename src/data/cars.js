@@ -1,3 +1,22 @@
+import bmw1 from "../assets/bmw/bmw-1.jpg";
+import bmw2 from "../assets/bmw/bmw-2.jpg";
+import bmw3 from "../assets/bmw/bmw-3.jpg";
+import audi1 from "../assets/audi/audi-a4-1.jpg";
+import audi2 from "../assets/audi/audi-a4-2.jpg";
+import audi3 from "../assets/audi/audi-a4-3.jpg";
+import lexus1 from "../assets/lexus/lexus-1.jpg";
+import lexus2 from "../assets/lexus/lexus-2.jpg";
+import lexus3 from "../assets/lexus/lexus-3.webp";
+import mercedes1 from "../assets/mercedes/Mercedes-1.jpg";
+import mercedes2 from "../assets/mercedes/Mercedes-2.jpg";
+import mercedes3 from "../assets/mercedes/Mercedes-3.jpg";
+import mini1 from "../assets/mini/mini-1.jpg";
+import mini2 from "../assets/mini/mini-2.jpg";
+import mini3 from "../assets/mini/mini-3.jpg";
+import porsch1 from "../assets/porsche/Porsche-1.jpg";
+import porsch2 from "../assets/porsche/Porsche-2.jpg";
+import porsch3 from "../assets/porsche/Porsche-3.jpg";
+
 export const cars = [
   {
     id: 1,
@@ -77,7 +96,7 @@ export const carsForBooking = [
     reviews: "4",
     seats: "4",
     gearType: "Auto",
-    car_images: ["", "", ""],
+    car_images: [audi1, audi2, audi3],
     luggage: "2",
     doors: "4",
     included: [
@@ -101,7 +120,7 @@ export const carsForBooking = [
     reviews: "4",
     seats: "2",
     gearType: "Auto",
-    car_images: ["", "", ""],
+    car_images: [bmw1, bmw2, bmw3],
     luggage: "2",
     doors: "2",
     included: [
@@ -125,7 +144,7 @@ export const carsForBooking = [
     reviews: "4",
     seats: "5",
     gearType: "Auto",
-    car_images: ["", "", ""],
+    car_images: [lexus1, lexus2, lexus3],
     luggage: "3",
     doors: "4",
     included: [
@@ -149,7 +168,7 @@ export const carsForBooking = [
     reviews: "4",
     seats: "2",
     gearType: "Auto",
-    car_images: ["", "", ""],
+    car_images: [mercedes1, mercedes2, mercedes3],
     luggage: "2",
     doors: "2",
     included: [
@@ -173,7 +192,7 @@ export const carsForBooking = [
     reviews: "4",
     seats: "2",
     gearType: "Auto",
-    car_images: ["", "", ""],
+    car_images: [mini1, mini2, mini3],
     luggage: "2",
     doors: "2",
     included: [
@@ -197,7 +216,7 @@ export const carsForBooking = [
     reviews: "4",
     seats: "2",
     gearType: "Auto",
-    car_images: ["", "", ""],
+    car_images: [porsch1, porsch2, porsch3],
     luggage: "2",
     doors: "2",
     included: [

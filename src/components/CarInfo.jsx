@@ -5,8 +5,80 @@ import { VscSettings } from "react-icons/vsc";
 import { AiOutlineCar, AiOutlineCheck } from "react-icons/ai";
 import { carsForBooking } from "../data/cars";
 import { useParams } from "react-router-dom";
+import { useFormik } from "formik";
+
+const validate = (values) => {
+  const errors = {};
+  if (!values.fullName) {
+    errors.fullName = "Required";
+  } else if (values.fullName.length > 15) {
+    errors.fullName = "Must be 15 characters or less";
+  }
+
+  if (!values.phoneNo) {
+    errors.phoneNo = "Required";
+  } else if (values.phoneNo.length < 11) {
+    errors.phoneNo = "Must be 11 digits";
+  }
+
+  if (!values.emailAddress) {
+    errors.emailAddress = "Required";
+  } else if (
+    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.emailAddress)
+  ) {
+    errors.emailAddress = "Invalid email address";
+  }
+
+  if (!values.pickupAddress) {
+    errors.pickupAddress = "Required";
+  } else if (values.pickupAddress.length < 11) {
+    errors.pickupAddress = "Must be 11 characters";
+  }
+
+  if (!values.pickupDate) {
+    errors.pickupDate = "Required";
+  }
+
+  if (!values.pickupTime) {
+    errors.pickupTime = "Required";
+  }
+
+  if (!values.dropOffAddress) {
+    errors.dropOffAddress = "Required";
+  } else if (values.dropOffAddress.length < 11) {
+    errors.dropOffAddress = "Must be 11 digits";
+  }
+
+  if (!values.dropOffDate) {
+    errors.dropOffDate = "Required";
+  }
+
+  if (!values.dropOffTime) {
+    errors.dropOffTime = "Required";
+  }
+
+  return errors;
+};
 
 export default function CarInfo() {
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      emailAddress: "",
+      phoneNo: "",
+      pickupAddress: "",
+      pickupDate: "",
+      pickupTime: "",
+      dropOffAddress: "",
+      dropOffDate: "",
+      dropOffTime: "",
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   const params = useParams();
   const find_car = carsForBooking.find((c) => {
     return c.id == params.id;
@@ -121,7 +193,7 @@ export default function CarInfo() {
           </div>
         </div>
         <div className="car-info-form-col">
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <h2>
               ${find_car.ratePerDay} <span>Per Day</span>
             </h2>
@@ -132,62 +204,125 @@ export default function CarInfo() {
                 placeholder="John Doe"
                 name="fullName"
                 id="fullName"
+                onChange={formik.handleChange}
+                value={formik.values.fullName}
               />
             </div>
+            {formik.errors.fullName ? (
+              <div className="error">{formik.errors.fullName}</div>
+            ) : null}
             <div>
-              <label htmlFor="fullName">Email Address</label>
+              <label htmlFor="emailAddress">Email Address</label>
               <input
                 type="email"
                 placeholder="JohnDoe@gmail.com"
-                name="email"
-                id="email"
+                name="emailAddress"
+                id="emailAddress"
+                onChange={formik.handleChange}
+                value={formik.values.emailAddress}
               />
             </div>
+            {formik.errors.emailAddress ? (
+              <div className="error">{formik.errors.emailAddress}</div>
+            ) : null}
             <div>
-              <label htmlFor="fullName">Phone Number</label>
+              <label htmlFor="phoneNo">Phone Number</label>
               <input
                 type="text"
                 placeholder="+000-000-0000-000"
                 name="phoneNo"
                 id="phoneNo"
+                onChange={formik.handleChange}
+                value={formik.values.phoneNo}
               />
             </div>
+            {formik.errors.phoneNo ? (
+              <div className="error">{formik.errors.phoneNo}</div>
+            ) : null}
             <div>
-              <label htmlFor="address">Pickup Address</label>
+              <label htmlFor="pickupAddress">Pickup Address</label>
               <input
                 type="text"
                 placeholder="34 Mainfield Road"
-                name="address"
-                id="address"
+                name="pickupAddress"
+                id="pickupAddress"
+                onChange={formik.handleChange}
+                value={formik.values.pickupAddress}
               />
             </div>
+            {formik.errors.pickupAddress ? (
+              <div className="error">{formik.errors.pickupAddress}</div>
+            ) : null}
             <div>
               <label htmlFor="pickupDate">Pickup Date</label>
-              <input type="date" name="pickupDate" id="pickupDate" />
+              <input
+                type="date"
+                name="pickupDate"
+                id="pickupDate"
+                onChange={formik.handleChange}
+                value={formik.values.pickupDate}
+              />
             </div>
+            {formik.errors.pickupDate ? (
+              <div className="error">{formik.errors.pickupDate}</div>
+            ) : null}
             <div>
               <label htmlFor="pickupTime">Pickup Time</label>
-              <input type="time" name="pickupTime" id="pickupTime" />
+              <input
+                type="time"
+                name="pickupTime"
+                id="pickupTime"
+                onChange={formik.handleChange}
+                value={formik.values.pickupTime}
+              />
             </div>
+            {formik.errors.pickupTime ? (
+              <div className="error">{formik.errors.pickupTime}</div>
+            ) : null}
             <div>
-              <label htmlFor="dropAddress">Drop Off Address</label>
+              <label htmlFor="dropOffAddress">Drop Off Address</label>
               <input
                 type="text"
                 placeholder="34 Mainfield Road"
-                name="dropAddress"
-                id="dropAddress"
+                name="dropOffAddress"
+                id="dropOffAddress"
+                onChange={formik.handleChange}
+                value={formik.values.dropOffAddress}
               />
             </div>
+            {formik.errors.dropOffAddress ? (
+              <div className="error">{formik.errors.dropOffAddress}</div>
+            ) : null}
             <div>
-              <label htmlFor="dropDate">Drop Off Date</label>
-              <input type="date" name="dropDate" id="dropDate" />
+              <label htmlFor="dropOffDate">Drop Off Date</label>
+              <input
+                type="date"
+                name="dropOffDate"
+                id="dropOffDate"
+                onChange={formik.handleChange}
+                value={formik.values.dropOffDate}
+              />
             </div>
+            {formik.errors.dropOffDate ? (
+              <div className="error">{formik.errors.dropOffDate}</div>
+            ) : null}
             <div>
-              <label htmlFor="dropTime">Drop Off Time</label>
-              <input type="time" name="dropTime" id="dropTime" />
+              <label htmlFor="dropOffTime">Drop Off Time</label>
+              <input
+                type="time"
+                name="dropOffTime"
+                id="dropOffTime"
+                onChange={formik.handleChange}
+                value={formik.values.dropOffTime}
+              />
             </div>
+            {formik.errors.dropOffTime ? (
+              <div className="error">{formik.errors.dropOffTime}</div>
+            ) : null}
             <div>
-              <button className="booking-btn">Book Instantly</button>
+              <button className="booking-btn" type="submit">
+                Book Instantly
+              </button>
             </div>
           </form>
         </div>
