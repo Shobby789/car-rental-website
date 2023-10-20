@@ -1,7 +1,9 @@
 import "../styles/CarList.css";
 import { cars, carType } from "../data/cars";
+import { useNavigate } from "react-router-dom";
 
 export default function CarList() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="cars-list">
@@ -32,7 +34,12 @@ export default function CarList() {
         <div className="card-type-container">
           {carType.map((car) => {
             return (
-              <div className="car-card" id={car.id} key={car.id}>
+              <div
+                className="car-card"
+                id={car.id}
+                key={car.id}
+                onClick={() => navigate(`/${car.name}`)}
+              >
                 <img src={car.image} alt="" className="card-image" />
                 <div className="overlay">{car.name}</div>
               </div>

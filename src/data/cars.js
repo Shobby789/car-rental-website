@@ -16,6 +16,9 @@ import mini3 from "../assets/mini/mini-3.jpg";
 import porsch1 from "../assets/porsche/Porsche-1.jpg";
 import porsch2 from "../assets/porsche/Porsche-2.jpg";
 import porsch3 from "../assets/porsche/Porsche-3.jpg";
+import coupe1 from "../assets/coupes/coupe-1.jpeg";
+import coupe2 from "../assets/coupes/coupe-2.jpg";
+import coupe3 from "../assets/coupes/coupe-3.jpg";
 
 export const cars = [
   {
@@ -217,6 +220,57 @@ export const carsForBooking = [
     seats: "2",
     gearType: "Auto",
     car_images: [porsch1, porsch2, porsch3],
+    luggage: "2",
+    doors: "2",
+    included: [
+      {
+        audioInput: "Audio input",
+        bluetooth: "Bluetooth",
+        heated_seats: "Heated seats",
+        all_wheel_drive: "All wheel drive",
+        usb_input: "USB input",
+        fm_radio: "FM radio",
+      },
+    ],
+    exluded: ["GPS Navigation", "Sunroof"],
+  },
+];
+
+export const carsByType = [
+  {
+    id: 1,
+    name: "Coupe 1",
+    type: "Coupe",
+    image: coupe1,
+    ratePerDay: "79",
+    reviews: "4",
+    seats: "2",
+    gearType: "Auto",
+    car_images: [coupe1, coupe2, coupe3],
+    luggage: "2",
+    doors: "2",
+    included: [
+      {
+        audioInput: "Audio input",
+        bluetooth: "Bluetooth",
+        heated_seats: "Heated seats",
+        all_wheel_drive: "All wheel drive",
+        usb_input: "USB input",
+        fm_radio: "FM radio",
+      },
+    ],
+    exluded: ["GPS Navigation", "Sunroof"],
+  },
+  {
+    id: 2,
+    name: "Coupe 2",
+    type: "Coupe",
+    image: coupe2,
+    ratePerDay: "79",
+    reviews: "4",
+    seats: "2",
+    gearType: "Auto",
+    car_images: [coupe1, coupe2, coupe3],
     luggage: "2",
     doors: "2",
     included: [
