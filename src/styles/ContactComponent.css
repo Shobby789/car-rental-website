@@ -1,0 +1,47 @@
+.contact-component {
+  width: 100%;
+  min-height: 50vh;
+  padding: 7rem 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-component .contact-box {
+  width: 28%;
+  height: 200px;
+  border: 1px solid rgb(207, 204, 204);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  position: relative;
+}
+
+.number {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.contact-component .contact-box p {
+  font-size: 0.9rem;
+  display: block;
+}
+
+.icon {
+  font-size: 1rem;
+  margin: 0rem 0.3rem -0.2rem 0rem;
+}
+
+@media screen and (max-width: 720px) {
+  .contact-component {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .contact-component .contact-box {
+    width: 90%;
+  }
+}

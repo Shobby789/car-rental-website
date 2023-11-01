@@ -1,9 +1,11 @@
-import React from "react";
+import CommonHeader from "../components/CommonHeader";
+import ContactComponent from "../components/ContactComponent";
 
 export default function Contact() {
   return (
     <div>
-      <h2>Contact</h2>
+      <CommonHeader heading={"Contact"} />
+      <ContactComponent />
     </div>
   );
 }

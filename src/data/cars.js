@@ -19,6 +19,9 @@ import porsch3 from "../assets/porsche/Porsche-3.jpg";
 import coupe1 from "../assets/coupes/coupe-1.jpeg";
 import coupe2 from "../assets/coupes/coupe-2.jpg";
 import coupe3 from "../assets/coupes/coupe-3.jpg";
+import sedan1 from "../assets/sedans/sedan-1.webp";
+import sedan2 from "../assets/sedans/sedan-2.jpg";
+import sedan3 from "../assets/sedans/sedan-3.webp";
 
 export const cars = [
   {
@@ -263,7 +266,7 @@ export const carsByType = [
   },
   {
     id: 2,
-    name: "Coupe 2",
+    name: "Coupe",
     type: "Coupe",
     image: coupe2,
     ratePerDay: "79",
@@ -273,6 +276,55 @@ export const carsByType = [
     car_images: [coupe1, coupe2, coupe3],
     luggage: "2",
     doors: "2",
+    included: [
+      {
+        audioInput: "Audio input",
+        bluetooth: "Bluetooth",
+        heated_seats: "Heated seats",
+        all_wheel_drive: "All wheel drive",
+        usb_input: "USB input",
+        fm_radio: "FM radio",
+      },
+    ],
+    exluded: ["GPS Navigation", "Sunroof"],
+  },
+  // sedans
+  {
+    id: 3,
+    name: "Sedan",
+    type: "Sedan",
+    image: coupe1,
+    ratePerDay: "69",
+    reviews: "4",
+    seats: "4",
+    gearType: "Auto",
+    car_images: [sedan1, sedan2, sedan3],
+    luggage: "2",
+    doors: "4",
+    included: [
+      {
+        audioInput: "Audio input",
+        bluetooth: "Bluetooth",
+        heated_seats: "Heated seats",
+        all_wheel_drive: "All wheel drive",
+        usb_input: "USB input",
+        fm_radio: "FM radio",
+      },
+    ],
+    exluded: ["GPS Navigation", "Sunroof"],
+  },
+  {
+    id: 4,
+    name: "Sedan 2",
+    type: "Sedan",
+    image: coupe2,
+    ratePerDay: "79",
+    reviews: "4",
+    seats: "4",
+    gearType: "Auto",
+    car_images: [sedan1, sedan2, sedan3],
+    luggage: "2",
+    doors: "4",
     included: [
       {
         audioInput: "Audio input",

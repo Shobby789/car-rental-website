@@ -4,7 +4,7 @@ import { PiBagLight } from "react-icons/pi";
 import { VscSettings } from "react-icons/vsc";
 import { AiOutlineCar, AiOutlineCheck } from "react-icons/ai";
 import { carsForBooking } from "../data/cars";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useFormik } from "formik";
 
 const validate = (values) => {
@@ -61,6 +61,7 @@ const validate = (values) => {
 };
 
 export default function CarInfo() {
+  const location = useLocation();
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -84,7 +85,8 @@ export default function CarInfo() {
     return c.id == params.id;
   });
 
-  console.log("find_car >> ", find_car);
+  // console.log("find_car >> ", find_car);
+  console.log(location.pathname);
   return (
     <div className="car-info">
       <div className="car-info-row">

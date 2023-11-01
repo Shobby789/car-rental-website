@@ -38,7 +38,7 @@ export default function CarCarousel({ slideImages }) {
   const find_car = carsForBooking.find((c) => {
     return c.id == params.id;
   });
-  console.log("carousel images >> ", find_car);
+  // console.log("carousel images >> ", find_car);
   return (
     <div>
       <div className="slide-container">

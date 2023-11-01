@@ -13,6 +13,7 @@ export default function CarDetailsCard({
   seats,
   gear,
   luggage,
+  carType,
 }) {
   const navigate = useNavigate();
   const handleNavigate = () => {

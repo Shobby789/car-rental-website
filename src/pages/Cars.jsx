@@ -6,7 +6,7 @@ import CarsShowcase from "../components/CarsShowcase";
 export default function Cars() {
   return (
     <div>
-      <CommonHeader />
+      <CommonHeader heading={"Cars"} />
       <SearchFields />
       <CarsShowcase />
     </div>

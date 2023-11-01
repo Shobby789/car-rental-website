@@ -13,6 +13,7 @@ export default function AppRouting() {
       <Route path="/cars" element={<Cars />} />
       <Route path="/:name" element={<CarType />} />
       <Route path="/cars/:carName/:id" element={<Booking />} />
+      <Route path="/:type/:carName/:id" element={<Booking />} />
       <Route path="/contact" element={<Contact />} />
       {/* <Route path="/cars/:carName/:id" element={<CarDetails />} /> */}
     </Routes>
