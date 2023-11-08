@@ -5,12 +5,12 @@ import CarDetailsCard from "./CarDetailsCard";
 export default function CarTypeList() {
   const params = useParams();
   const carTypes = carsByType.filter((car) => {
-    if (params.name === car.type) {
+    if (params.type === car.type) {
       return car;
     }
   });
 
-  console.log("carTypes >> ", params.name);
+  console.log("carTypes >> ", params.type);
   console.log("testCars arr >> ", carTypes);
 
   return (

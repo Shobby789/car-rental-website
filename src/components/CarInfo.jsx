@@ -85,8 +85,6 @@ export default function CarInfo() {
     return c.id == params.id;
   });
 
-  // console.log("find_car >> ", find_car);
-  console.log(location.pathname);
   return (
     <div className="car-info">
       <div className="car-info-row">

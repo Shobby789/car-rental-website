@@ -242,7 +242,7 @@ export const carsForBooking = [
 export const carsByType = [
   {
     id: 1,
-    name: "Coupe 1",
+    name: "Yellow Coupe",
     type: "Coupe",
     image: coupe1,
     ratePerDay: "79",
